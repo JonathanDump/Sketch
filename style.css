@@ -22,7 +22,7 @@ body {
 
 }
 
-.name {
+.game-name {
     font-size: 46px;
 }
 
@@ -42,6 +42,7 @@ body {
     text-align: center;
     position: relative;
     color: rgb(192, 192, 192);
+    position: relative;
 }
 
 .button:hover {
@@ -54,7 +55,7 @@ body {
 
 /* COLOR PICKER BUTTON */
 
-.button.color-picker {
+.button-color-picker {
     position: relative;
     height: 46px;
     width: 186px;
@@ -62,6 +63,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 25px;
+    
 }
 
 .text-container {
@@ -70,7 +73,7 @@ body {
     align-items: center;
     height: 100%;
     width: 100%;
-    background-color: rgb(63, 63, 63);
+    
     position: absolute;
     pointer-events: none;
     user-select: none;
@@ -78,6 +81,11 @@ body {
 
 .text-container:hover{
     box-shadow: inset 0 4em white;
+    color: red;
+}
+
+.button-color-picker:hover{
+    scale: 110%;
 }
 
 .color-picker-text{
@@ -93,20 +101,22 @@ body {
     outline: none;
     height: 100%;
     width: 100%;
-    scale: 200%;
-    
+    scale: 130%;
+    opacity: 0;
 }
 
 input[type="color"] {
-	border: none;
-	width: 100%;
-	height: 100%;
+    border: none;
+    width: 100%;
+    height: 100%;
 }
+
 input[type="color"]::-webkit-color-swatch-wrapper {
-	padding: 0;
+    padding: 0;
 }
+
 input[type="color"]::-webkit-color-swatch {
-	border: none;
+    border: none;
 }
 
 
@@ -145,8 +155,8 @@ input[type="color"]::-webkit-color-swatch {
     max-height: 46px;
 }
 
-.btn:hover{
-    
+.btn:hover {
+
     scale: 110%;
 }
 
