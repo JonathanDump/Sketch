@@ -22,7 +22,7 @@ body {
 
 }
 
-.game-name {
+.game-name-text {
     font-size: 46px;
 }
 
@@ -63,8 +63,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 25px;
-    
+    padding: 0;
 }
 
 .text-container {
@@ -73,19 +72,9 @@ body {
     align-items: center;
     height: 100%;
     width: 100%;
-    
     position: absolute;
     pointer-events: none;
     user-select: none;
-}
-
-.text-container:hover{
-    box-shadow: inset 0 4em white;
-    color: red;
-}
-
-.button-color-picker:hover{
-    scale: 110%;
 }
 
 .color-picker-text{
@@ -101,8 +90,9 @@ body {
     outline: none;
     height: 100%;
     width: 100%;
-    scale: 130%;
     opacity: 0;
+    cursor: pointer;
+    
 }
 
 input[type="color"] {
