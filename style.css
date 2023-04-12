@@ -43,6 +43,7 @@ body {
     position: relative;
     color: rgb(192, 192, 192);
     position: relative;
+    min-width: 140px;
 }
 
 .button:hover {
@@ -58,7 +59,7 @@ body {
 .button-color-picker {
     position: relative;
     height: 46px;
-    width: 186px;
+    width: 210px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -143,6 +144,7 @@ input[type="color"]::-webkit-color-swatch {
     background-color: rgb(63, 63, 63);
     transition: all 0.10s ease;
     max-height: 46px;
+    
 }
 
 .btn:hover {
@@ -155,7 +157,8 @@ input[type="color"]::-webkit-color-swatch {
     width: 100%;
     /* Width of the outside container */
     position: relative;
-    width: 164px;
+    width: 210px;
+
     height: 46px;
 }
 
