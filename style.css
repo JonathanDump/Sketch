@@ -36,9 +36,9 @@ body {
 
 .button {
     background-color: rgb(63, 63, 63);
-    padding: 10px 20px;
+    padding: 10px 19px;
     border-radius: 25px;
-    transition: all 0.10s ease;
+    transition: all 0.20s ease;
     text-align: center;
     position: relative;
     color: rgb(192, 192, 192);
@@ -47,14 +47,67 @@ body {
 .button:hover {
     cursor: pointer;
     scale: 110%;
-    box-shadow: inset 0 2em white;
+    box-shadow: inset 0 4em white;
     color: black;
     position: relative;
 }
 
+/* COLOR PICKER BUTTON */
 
+.button.color-picker {
+    position: relative;
+    height: 46px;
+    width: 186px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(63, 63, 63);
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+}
 
+.text-container:hover{
+    box-shadow: inset 0 4em white;
+}
+
+.color-picker-text{
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+}
+
+#color-picker{
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    scale: 200%;
+    
+}
+
+input[type="color"] {
+	border: none;
+	width: 100%;
+	height: 100%;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
 
 
 
@@ -125,6 +178,7 @@ body {
 /*generated with Input range slider CSS style generator (version 20211225)
   https://toughengineer.github.io/demo/slider-styler*/
 input[type=range].slider {
+    appearance: none;
     -webkit-appearance: none;
     background: none;
     position: absolute;
