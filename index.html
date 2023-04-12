@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="null.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Sketch</title>
+</head>
+
+<body>
+    <div class="control-panel">
+        <div class="name-container">
+            <div class="name">Etch-A-Sketch</div>
+        </div>
+        <div class="buttons-container">
+            <div class="button color-picker">Color picker</div>
+            <div class="button rainbow">Rainbow</div>
+            <div class="button eraser">Eraser</div>
+            <div class="button clear">Clear</div>
+            <div class="btn grid">
+                <div class="slider-container">
+                    
+                    <input type="range" min="1" max="100" value="50" class="slider slider-progress" id="myRange">
+                    <span class="grid-size-text">50x50</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="canvas-container">
+        <div class="canvas">
+            <div class="pixel"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

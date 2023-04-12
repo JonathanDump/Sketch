@@ -1,0 +1,251 @@
+@font-face {
+    font-family: Sysfont;
+    src: url("Sysfont/sysfont.woff2") format("woff2");
+    font-style: normal;
+}
+
+body {
+    background-color: gray;
+    color: white;
+    font-family: Sysfont, sans-serif;
+}
+
+/* CONTROL PANEL */
+.control-panel {
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+}
+
+.name {
+    font-size: 46px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 26px;
+    gap: 60px;
+}
+
+
+.button {
+    background-color: rgb(63, 63, 63);
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.10s ease;
+    text-align: center;
+    position: relative;
+    color: rgb(192, 192, 192);
+}
+
+.button:hover {
+    cursor: pointer;
+    scale: 110%;
+    box-shadow: inset 0 2em white;
+    color: black;
+    position: relative;
+}
+
+
+
+
+
+
+
+/* CANVAS CONTAINER */
+.canvas-container {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas {
+    display: flex;
+    flex-wrap: wrap;
+    width: 640px;
+    height: 640px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.pixel {
+    background-color: white;
+}
+
+
+/* SLIDER */
+.btn {
+    border-radius: 25px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: rgb(63, 63, 63);
+    transition: all 0.10s ease;
+    max-height: 46px;
+}
+
+.btn:hover{
+    
+    scale: 110%;
+}
+
+
+.slider-container {
+    width: 100%;
+    /* Width of the outside container */
+    position: relative;
+    width: 164px;
+    height: 46px;
+}
+
+.grid-size-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 25px;
+    pointer-events: none;
+    user-select: none;
+    background: inherit;
+    mix-blend-mode: difference;
+    color: white;
+
+}
+
+
+/*generated with Input range slider CSS style generator (version 20211225)
+  https://toughengineer.github.io/demo/slider-styler*/
+input[type=range].slider {
+    -webkit-appearance: none;
+    background: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+}
+
+/*progress support*/
+input[type=range].slider.slider-progress {
+    --range: calc(var(--max) - var(--min));
+    --ratio: calc((var(--value) - var(--min)) / var(--range));
+    --sx: calc(var(--ratio) * 100%);
+}
+
+input[type=range].slider:focus {
+    outline: none;
+}
+
+/*webkit*/
+input[type=range].slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 0;
+    height: 1em;
+    visibility: hidden;
+}
+
+input[type=range].slider::-webkit-slider-runnable-track {
+    height: 100%;
+    border: 0;
+    border-radius: 25px;
+    background: #9a9a9a;
+    box-shadow: none;
+}
+
+input[type=range].slider:hover::-webkit-slider-runnable-track {
+    border-color: #9a9a9a;
+}
+
+input[type=range].slider:active::-webkit-slider-runnable-track {
+    border-color: #c1c1c1;
+}
+
+input[type=range].slider.slider-progress::-webkit-slider-runnable-track {
+    background: linear-gradient(#FFFFFF, #FFFFFF) 0/var(--sx) 100% no-repeat, rgb(63, 63, 63);
+}
+
+/*mozilla*/
+input[type=range].slider::-moz-range-thumb {
+    width: 0;
+    height: 1em;
+    visibility: hidden;
+}
+
+input[type=range].slider::-moz-range-track {
+    height: max(calc(1em - 1px - 1px), 0px);
+    border: 1px solid #b2b2b2;
+    border-radius: 0.5em;
+    background: #616161;
+    box-shadow: none;
+}
+
+input[type=range].slider:hover::-moz-range-track {
+    border-color: #9a9a9a;
+}
+
+input[type=range].slider:active::-moz-range-track {
+    border-color: #c1c1c1;
+}
+
+input[type=range].slider.slider-progress::-moz-range-track {
+    background: linear-gradient(#FFFFFF, #FFFFFF) 0/var(--sx) 100% no-repeat, #616161;
+}
+
+/*ms*/
+input[type=range].slider::-ms-fill-upper {
+    background: transparent;
+    border-color: transparent;
+}
+
+input[type=range].slider::-ms-fill-lower {
+    background: transparent;
+    border-color: transparent;
+}
+
+input[type=range].slider::-ms-thumb {
+    width: 2em;
+    height: 2em;
+    border-radius: 1em;
+    background: #007cf8;
+    border: none;
+    box-shadow: 0 0 2px black;
+    margin-top: 0;
+    box-sizing: border-box;
+}
+
+input[type=range].slider::-ms-track {
+    height: 1em;
+    border-radius: 0.5em;
+    background: #616161;
+    border: 1px solid #b2b2b2;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+input[type=range].slider:hover::-ms-track {
+    border-color: #9a9a9a;
+}
+
+input[type=range].slider:active::-ms-track {
+    border-color: #c1c1c1;
+}
+
+input[type=range].slider.slider-progress::-ms-fill-lower {
+    height: max(calc(1em - 1px - 1px), 0px);
+    border-radius: 0.5em 0 0 0.5em;
+    margin: -1px 0 -1px -1px;
+    background: #FFFFFF;
+    border: 1px solid #b2b2b2;
+    border-right-width: 0;
+}
